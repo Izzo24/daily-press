@@ -212,7 +212,7 @@ section{padding:90px 0}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 
 /* ===== 購物車 / 結帳 ===== */
-.cartbtn{position:fixed;top:14px;right:24px;z-index:150;box-shadow:0 6px 20px rgba(0,0,0,.3);display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;border:2px solid var(--c-line);background:var(--c-panel);color:var(--c-ink);cursor:pointer;transition:.2s;flex:none}
+.cartbtn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;border:2px solid var(--c-line);background:var(--c-panel);color:var(--c-ink);cursor:pointer;transition:.2s;flex:none}
 .cartbtn:hover{color:var(--c-accent);border-color:var(--c-accent)}
 .cartbtn__n{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--c-accent);color:var(--c-onacc);font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;transform:scale(0);transition:.2s}
 .cartbtn.has .cartbtn__n{transform:scale(1)}
@@ -288,16 +288,13 @@ section{padding:90px 0}
 .cartbtn{margin-left:8px}
 
 @media(max-width:1080px){.menu{display:none}.burger{display:flex}}
-/* 手機版浮動鈕｜日榨：果汁橘・粗白邊・圓鈕，俏皮彈跳。 */
-@media(max-width:860px){
-  .cartbtn{top:auto;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;
-    background:var(--c-accent);color:#fff;border:3px solid #fff;
-    box-shadow:0 8px 0 0 var(--orange-d,rgba(0,0,0,.3)),0 10px 22px rgba(0,0,0,.22)}
-  .cartbtn:hover{color:#fff;border-color:#fff;transform:translateY(-3px)}
-  .cartbtn:active{transform:translateY(2px);box-shadow:0 4px 0 0 var(--orange-d,rgba(0,0,0,.3)),0 6px 14px rgba(0,0,0,.22)}
-  .cartbtn svg{width:26px;height:26px}
-  .cartbtn__n{top:-3px;right:-3px;border:2px solid #fff}
-  .totop{bottom:92px;right:22px}
-}
-/* 手機版：購物車鈕移出 nav 後，漢堡鈕需自行靠右（原本靠 menu/cart 推右）。 */
-@media(max-width:1080px){ .burger{margin-left:auto} }
+
+
+/* ===== 標準 header：漢堡左／Logo置中／購物車右／抽屜選單（覆寫，2026-06-25） ===== */
+.nav__in{justify-content:space-between;position:relative;gap:14px}
+.nav__in .brand{position:absolute;left:50%;transform:translateX(-50%);margin:0}
+.burger{display:flex!important;flex:none;margin-left:0!important}
+.menu{display:none!important;margin-left:0!important}
+.menu.open{display:flex!important;position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px 22px;box-shadow:var(--shadow);transform:none!important;z-index:99}
+.menu.open a{padding:13px 6px;font-size:1.05rem;border-bottom:1px solid var(--line)}
+.cartbtn{margin-left:0!important}
