@@ -290,6 +290,7 @@ section{padding:90px 0}
 
 
 /* ===== 標準 header：漢堡左／Logo置中／購物車右／抽屜選單（覆寫，2026-06-25） ===== */
+@media(max-width:860px){
 .nav__in{justify-content:space-between;position:relative;gap:14px}
 .nav__in .brand{position:absolute;left:50%;transform:translateX(-50%);margin:0}
 .burger{display:flex!important;flex:none;margin-left:0!important}
@@ -297,6 +298,7 @@ section{padding:90px 0}
 .menu.open{display:flex!important;position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px 22px;box-shadow:var(--shadow);transform:none!important;z-index:99}
 .menu.open a{padding:13px 6px;font-size:1.05rem;border-bottom:1px solid var(--line)}
 .cartbtn{margin-left:0!important}
+}
 
 
 /* 購物車「繼續購物」外框鈕 */
