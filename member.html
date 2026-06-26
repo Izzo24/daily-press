@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>會員中心｜登入・註冊與訂單查詢 — 日榨 DAILY PRESS</title>
+<meta name="description" content="日榨 DAILY PRESS 會員中心:登入或加入會員,享訂閱優惠、生日好禮、新口味優先嚐與訂單查詢,管理你的冷壓蔬果汁宅配。">
+<meta name="keywords" content="日榨會員,會員中心,冷壓果汁訂閱,登入,註冊,訂單查詢">
+<link rel="canonical" href="https://izzo24.github.io/daily-press/member.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="日榨 DAILY PRESS">
+<meta property="og:title" content="會員中心 — 日榨 DAILY PRESS">
+<meta property="og:description" content="登入或加入日榨會員,享訂閱優惠、生日好禮與訂單查詢。">
+<meta property="og:url" content="https://izzo24.github.io/daily-press/member.html">
+<meta property="og:image" content="https://izzo24.github.io/daily-press/images/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ff7a1a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ff7a1a'/%3E%3Cpath d='M13 7h6v2.5c0 .8.4 1.5 1 2 2 1.6 3 3.5 3 6.5a7 7 0 01-14 0c0-3 1-4.9 3-6.5.6-.5 1-1.2 1-2V7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css">
+<style>
+.mc{max-width:1080px;margin:0 auto;padding:46px 24px 80px}
+.mc__crumb{font-size:.86rem;color:var(--ink-2);margin-bottom:14px}
+.mc__crumb a{color:var(--ink-2)}.mc__crumb a:hover{color:var(--orange-d)}
+.mc h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.1rem);margin-bottom:10px}
+.mc__sub{color:var(--ink-2);max-width:54ch;margin-bottom:34px}
+.mc__grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:18px}
+.mc__card{background:var(--panel);border:2px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.mc__card h2{font-family:var(--display);font-size:1.4rem;margin-bottom:18px}
+.mc__card label{display:block;font-weight:500;font-size:.9rem;margin-bottom:14px;color:var(--ink-2)}
+.mc__card input{display:block;width:100%;margin-top:6px;padding:12px 14px;border:2px solid var(--line);border-radius:13px;background:var(--bg);font:inherit;font-size:15px;color:var(--ink)}
+.mc__card input:focus{outline:none;border-color:var(--orange)}
+.mc__h2{font-family:var(--display);font-size:clamp(1.5rem,4vw,2.2rem);margin:38px 0 18px}
+.mc__benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mc__b{background:var(--panel);border:2px solid var(--line);border-radius:var(--r-sm);padding:22px}
+.mc__b svg{width:32px;height:32px;margin-bottom:10px;color:var(--orange-d)}
+.mc__b h3{font-family:var(--display);font-size:1.08rem;margin-bottom:6px}
+.mc__b p{font-size:.9rem;color:var(--ink-2)}
+.mc__orders{margin-top:22px;background:var(--cream-2);border:2px solid var(--line);border-radius:var(--r);padding:34px;text-align:center}
+.mc__orders h2{font-family:var(--display);font-size:1.4rem;margin-bottom:10px}
+.mc__orders p{color:var(--ink-2);margin-bottom:18px}
+.mc__toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,160%);background:var(--ink);color:#fff;padding:14px 22px;border-radius:999px;font-weight:600;z-index:400;transition:transform .4s}
+.mc__toast.show{transform:translate(-50%,0)}
+@media(max-width:760px){.mc__grid{grid-template-columns:1fr}.mc__benefits{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.mc__benefits{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://izzo24.github.io/daily-press/"},{"@type":"ListItem","position":2,"name":"會員中心","item":"https://izzo24.github.io/daily-press/member.html"}]},
+{"@type":"WebPage","name":"會員中心 — 日榨 DAILY PRESS","url":"https://izzo24.github.io/daily-press/member.html","inLanguage":"zh-Hant"}]}
+</script>
+</head>
+<body data-currency="NT$" data-ship-free="600" data-ship-fee="80" data-add-label="已加入購物車" data-cart-title="購物車">
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <a class="brand" href="./index.html" aria-label="日榨 DAILY PRESS 首頁">
+      <svg class="brand__mk" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#ff7a1a"/><path d="M16 9h8v3c0 1 .5 1.9 1.3 2.5C27.7 16.4 29 18.7 29 22a9 9 0 01-18 0c0-3.3 1.3-5.6 3.7-7.5C15.5 13.9 16 13 16 12V9z" fill="#fff"/><path d="M17.5 11h5" stroke="#ff7a1a" stroke-width="1.8" stroke-linecap="round"/><circle cx="17" cy="23" r="1.6" fill="#3aab5b"/><circle cx="23" cy="25" r="1.6" fill="#e0407a"/></svg>
+      <span class="brand__tx"><b>日榨</b><i>DAILY PRESS</i></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="主選單">
+      <a href="./index.html#why">日榨堅持</a>
+      <a href="./index.html#process">現榨製程</a>
+      <a href="./index.html#shop">商品訂購</a>
+      <a href="./index.html#faq">常見問題</a>
+      <a href="./index.html#contact">聯絡我們</a>
+      <a href="./member.html" aria-current="page">會員</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="mc">
+  <p class="mc__crumb"><a href="./index.html">首頁</a> ／ 會員中心</p>
+  <h1>會員中心</h1>
+  <p class="mc__sub">登入或加入日榨會員,享訂閱優惠、生日好禮、新口味優先嚐與訂單查詢,讓每天一瓶的習慣更順手。</p>
+  <div class="mc__grid">
+    <div class="mc__card">
+      <h2>會員登入</h2>
+      <form data-demo>
+        <label>電子郵件<input type="email" required autocomplete="email" placeholder="you@example.com"></label>
+        <label>密碼<input type="password" required autocomplete="current-password" placeholder="請輸入密碼"></label>
+        <button class="btn btn--cta btn--block" type="submit">登入</button>
+      </form>
+    </div>
+    <div class="mc__card">
+      <h2>加入會員</h2>
+      <form data-demo>
+        <label>姓名<input type="text" required autocomplete="name"></label>
+        <label>電子郵件<input type="email" required autocomplete="email"></label>
+        <label>設定密碼<input type="password" required autocomplete="new-password" placeholder="至少 8 碼"></label>
+        <button class="btn btn--cta btn--block" type="submit">免費註冊</button>
+      </form>
+    </div>
+  </div>
+  <h2 class="mc__h2">會員權益</h2>
+  <div class="mc__benefits">
+    <div class="mc__b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21S4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12z"/></svg><h3>生日好禮</h3><p>生日當月贈專屬冷壓禮券。</p></div>
+    <div class="mc__b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><h3>訂閱優惠</h3><p>每週宅配訂閱享會員價與免運。</p></div>
+    <div class="mc__b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5l8-2 8 2v6c0 5-3.5 8-8 10C7.5 19 4 16 4 11z"/></svg><h3>新口味優先</h3><p>季節限定新榨第一時間搶先嚐。</p></div>
+    <div class="mc__b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 9h16M9 14h6"/></svg><h3>訂單查詢</h3><p>登入即可追蹤訂單與配送進度。</p></div>
+  </div>
+  <div class="mc__orders">
+    <h2>我的訂單</h2>
+    <p>登入後即可在此查看你的訂單紀錄、訂閱方案與配送進度。</p>
+    <a class="btn btn--cta" href="./index.html#shop">前往選購</a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <a class="brand brand--foot" href="./index.html" aria-label="日榨 DAILY PRESS">
+        <svg class="brand__mk" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#ff7a1a"/><path d="M16 9h8v3c0 1 .5 1.9 1.3 2.5C27.7 16.4 29 18.7 29 22a9 9 0 01-18 0c0-3.3 1.3-5.6 3.7-7.5C15.5 13.9 16 13 16 12V9z" fill="#fff"/><circle cx="17" cy="23" r="1.6" fill="#3aab5b"/><circle cx="23" cy="25" r="1.6" fill="#e0407a"/></svg>
+        <span class="brand__tx"><b>日榨</b><i>DAILY PRESS</i></span>
+      </a>
+      <p>當日現榨冷壓蔬果汁，把整座果園喝進日常。</p>
+    </div>
+    <nav class="foot__col" aria-label="商品"><h4>商品</h4><a href="./index.html#shop">綠盈冷壓</a><a href="./index.html#shop">橙活冷壓</a><a href="./index.html#shop">紅萃冷壓</a></nav>
+    <nav class="foot__col" aria-label="關於"><h4>關於</h4><a href="./index.html#why">日榨堅持</a><a href="./index.html#process">現榨製程</a><a href="./index.html#faq">常見問題</a></nav>
+    <div class="foot__col"><h4>會員</h4><a href="./member.html">會員中心</a><a href="./index.html#contact">聯絡我們</a><p class="foot__hours">每日 09:00–18:00</p></div>
+  </div>
+  <div class="wrap foot__btm">
+    <small>© 2026 日榨 DAILY PRESS. 本網站為設計作品示範，內容與價格僅供展示。</small>
+    <small class="foot__credit">網站設計與架設：<a href="https://bridgeseqlab.com" target="_blank" rel="noopener">橋序創研 BridgeSeq Lab</a></small>
+  </div>
+</footer>
+<div class="mc__toast" id="mcToast" role="status" aria-live="polite">已送出(此為預覽展示站,尚未串接會員系統)。</div>
+<script src="./assets/app.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var b=document.getElementById("burger"),m=document.getElementById("menu");
+  if(b&&m){b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});}
+  var t=document.getElementById("mcToast");
+  document.querySelectorAll("form[data-demo]").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();if(t){t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove("show");},3200);}f.reset();});});
+});
+</script>
+</body>
+</html>
